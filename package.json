@@ -1,0 +1,56 @@
+{
+  "name": "myljail",
+  "version": "1.0.0",
+  "description": "Discord bot that allows you to create jail",
+  "keywords": [
+    "discordx",
+    "discord.ts",
+    "discord.js",
+    "bot",
+    "discord",
+    "typescript"
+  ],
+  "homepage": "https://github.com/dgascon/Myljail#readme",
+  "bugs": {
+    "url": "https://github.com/dgascon/Myljail/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dgascon/Myljail.git"
+  },
+  "license": "MIT",
+  "author": "Mylhow",
+  "type": "module",
+  "main": "build/main.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "node --loader ts-node/esm/transpile-only src/main.ts",
+    "start": "nodemon --exec node --loader ts-node/esm/transpile-only src/main.ts",
+    "serve": "node build/main.js"
+  },
+  "dependencies": {
+    "@discordx/importer": "^1.1.2",
+    "@discordx/koa": "^1.0.6",
+    "@discordx/pagination": "^1.1.0",
+    "@discordx/utilities": "^3.3.0",
+    "@koa/router": "^10.1.1",
+    "discord.js": "^13.6.0",
+    "discordx": "^9.1.12",
+    "koa": "^2.13.4",
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "@discordx/changelog": "^2.0.7",
+    "@types/koa": "^2.13.4",
+    "@types/koa__router": "^8.0.11",
+    "dotenv": "^14.3.2",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  }
+}
