@@ -2,7 +2,8 @@
   "compilerOptions": {
     "module": "ESNext", // required
     "target": "ESNext", // required
-    "noImplicitAny": true,
+    "typeRoots": ["node_modules/@types"],
+    "pretty": true,
     "sourceMap": true,
     "strict": true,
     "outDir": "build",
@@ -12,8 +13,18 @@
     "importHelpers": true, // required
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "Node", // required
-    "esModuleInterop": true // required
+    "esModuleInterop": true, // required
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"],
+      "@api/*": ["api/*"],
+      "@commands/*": ["commands/*"],
+      "@core/*": ["core/*"],
+      "@guards/*": ["guards/*"],
+      "@utils/*": ["utils/*"],
+      "@prisma/*": ["prisma/*"],
+    },
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "build"],
+  "include": ["src/**/*.ts", "src/**/*.json", ".env"],
+  "exclude": ["node_modules", "build", "src/logs", "src/tests"],
 }
